@@ -8,7 +8,7 @@
   },
   "author": "Sawan kumar",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^9.0.0"
   }
 }
