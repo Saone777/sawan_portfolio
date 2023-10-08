@@ -1,14 +1,18 @@
 // Widescreens
 @include mediaXl {
-
+    .projects {
+       grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-//Desdtops & Laptops
+//Dsdtops & Laptops
 @include mediaLg {
-
+    .projects { 
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-//Desdtops & Laptops
+//Tablets & small Laptops
 @include mediaMd {
     main {
    align-items: center;
@@ -42,11 +46,25 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-        background: url('../img/portrait.jpg');
-        width: 150px;
-        height: 150px;
-    }
+        background: url("/img/portrait_small\ \ \(1\).jpg");
+        width:250px;
+        height:250px;   
+      }
    }
+   .about-info {
+    grid-template-areas: 
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+      grid-template-columns: 1fr;
+   }
+
+   .projects { 
+      grid-template-columns: repeat(2, 1fr);
+    }
+ 
 }
 
 //Smartphone
@@ -54,5 +72,9 @@
    main#home h1 {
     margin-top: 10vh;
    }
+
+   .projects { 
+    grid-template-columns: repeat( 1fr);
+ }
 }
 
