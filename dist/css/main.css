@@ -42,20 +42,20 @@
     padding: 0;
     background: #373737;
     list-style: none;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 240px;
-      height: 240px;
-      background: url("/img/portrait_small.jpg");
+      width: 250px;
+      height: 250px;
+      background: url("/img/portrait (1).png");
       border-radius: 50%;
       border: solid 4px #eece1a; }
   .menu .nav-item {
@@ -63,6 +63,8 @@
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #eece1a; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -145,10 +147,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      transition: all 0.5s ease-out; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
+        color: #eece1a; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -180,7 +182,7 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
@@ -248,11 +250,13 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
+    ul.menu-nav.show,
+    div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
@@ -263,16 +267,21 @@ main {
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url("/img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+@media screen and (max-width: 400px) {
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
     grid-template-columns: repeat(1fr); } }

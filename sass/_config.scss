@@ -18,7 +18,7 @@ $background-opacity: 0.9;
         background-size: cover;
         
         &:after {
-            content:'';
+            content: '';
             position: absolute;
             top: 0;
             width: 100%;
@@ -43,7 +43,7 @@ $background-opacity: 0.9;
 
 //Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
       @content;
   }
 }
